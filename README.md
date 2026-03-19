@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📸 SnapOG
 
-## Getting Started
+**Beautiful OG Images in Milliseconds** — [snapog-teal.vercel.app](https://snapog-teal.vercel.app)
 
-First, run the development server:
+Generate stunning social preview images for Twitter, Facebook, and LinkedIn with a simple URL API.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## How It Works
+
+```html
+<meta property="og:image"
+  content="https://snapog-teal.vercel.app/api/og?title=My+Page&theme=dark&template=bold" />
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+That's it. One URL → beautiful PNG image.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Templates
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Template | Description |
+|----------|-------------|
+| `default` | Clean, professional layout |
+| `bold` | Large title with gradient accent |
+| `minimal` | Maximum whitespace, clean typography |
+| `blog` | Optimized for article previews |
+| `product` | Product launch style |
 
-## Learn More
+## Themes
 
-To learn more about Next.js, take a look at the following resources:
+`dark` · `light` · `gradient` · `ocean` · `sunset` · `forest`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## API Parameters
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `title` | string | required | Main heading |
+| `description` | string | — | Subtitle |
+| `template` | string | default | Template name |
+| `theme` | string | dark | Color theme |
+| `siteName` | string | — | Brand name |
+| `accent` | string | #3b82f6 | Accent color |
+| `width` | number | 1200 | Image width |
+| `height` | number | 630 | Image height |
 
-## Deploy on Vercel
+## Tech Stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Next.js 16 + TypeScript + Tailwind CSS
+- @vercel/og (Satori-based edge image generation)
+- Vercel Edge Functions
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Development
+
+```bash
+npm install
+npm run dev
+```
+
+## License
+
+MIT
