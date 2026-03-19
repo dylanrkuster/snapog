@@ -18,7 +18,19 @@ export const metadata: Metadata = {
     title: "SnapOG — Beautiful OG Images in Milliseconds",
     description: "Generate stunning social preview images. Free templates + simple API.",
     type: "website",
+    url: "https://snapog-teal.vercel.app",
     siteName: "SnapOG",
+    images: [{
+      url: "https://snapog-teal.vercel.app/api/og?title=SnapOG&description=Beautiful+OG+Images+in+Milliseconds&theme=ocean&template=product&siteName=snapog&accent=%2338bdf8",
+      width: 1200,
+      height: 630,
+    }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SnapOG — Beautiful OG Images in Milliseconds",
+    description: "Generate stunning social preview images. Free API, no signup.",
+    images: ["https://snapog-teal.vercel.app/api/og?title=SnapOG&description=Beautiful+OG+Images+in+Milliseconds&theme=ocean&template=product&siteName=snapog&accent=%2338bdf8"],
   },
   robots: "index, follow",
 };
@@ -29,6 +41,33 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebApplication",
+              "name": "SnapOG",
+              "url": "https://snapog-teal.vercel.app",
+              "description": "Generate beautiful OG images for social media with a simple URL API. 5 templates, 6 themes, no signup required.",
+              "applicationCategory": "DeveloperApplication",
+              "operatingSystem": "Any",
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+              },
+              "featureList": [
+                "OG Image Generator",
+                "Social Preview API",
+                "5 Professional Templates",
+                "6 Color Themes",
+                "Custom Accent Colors",
+                "No API Key Required"
+              ]
+            })
+          }}
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link
