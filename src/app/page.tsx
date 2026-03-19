@@ -180,7 +180,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="border-t px-4 py-8 text-center text-sm" style={{ borderColor: "var(--border)", color: "var(--text-secondary)" }}>
-        <p>📸 SnapOG — Beautiful social previews, generated in milliseconds. <a href="https://jsonbolt.vercel.app" style={{ color: "var(--accent)" }}>Also try JSONBolt</a>.</p>
+        <p>📸 SnapOG — Beautiful social previews, generated in milliseconds. Also try <a href="https://jsonbolt.vercel.app" style={{ color: "var(--accent)" }}>JSONBolt</a> and <a href="https://policyforge-blond.vercel.app" style={{ color: "var(--accent)" }}>PolicyForge</a>.</p>
       </footer>
     </main>
   );
